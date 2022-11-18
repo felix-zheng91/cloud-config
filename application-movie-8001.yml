@@ -1,0 +1,23 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: microservice-movie
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+#      defaultZone: http://127.0.0.1:6001/eureka,http://127.0.0.1:6002/eureka
+      defaultZone: http://127.0.0.1:6001/eureka
+#    registry-fetch-interval-seconds: 5 # 获取服务间隔时间
+  instance:
+    prefer-ip-address: true
+# 修改指定微服务 Load Balance 规则
+microservice-user:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+# 开启 Hystrix
+feign:
+  hystrix:
+    enabled: true

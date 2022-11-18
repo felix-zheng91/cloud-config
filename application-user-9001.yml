@@ -1,0 +1,27 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: microservice-user
+  datasource:
+    url: jdbc:mysql://47.106.93.255:3306/db?characterEncoding=UTF8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: isnoopy007
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      #      defaultZone: http://127.0.0.1:6001/eureka,http://127.0.0.1:6002/eureka
+      defaultZone: http://127.0.0.1:6001/eureka
+  instance:
+    prefer-ip-address: true
+#    lease-renewal-interval-in-seconds:  # 服务续约时间
+    lease-expiration-duration-in-seconds: 30 # 服务失去连接下架时间
