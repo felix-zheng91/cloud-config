@@ -3,6 +3,15 @@ server:
 spring:
   application:
     name: microservice-movie
+  rabbitmq:
+    host: http://localhost
+  zipkin:
+    sender:
+      type: web
+    base-url: http://localhost:7003
+  sleuth:
+    sampler:
+      probability: 1
 eureka:
   client:
     register-with-eureka: true
