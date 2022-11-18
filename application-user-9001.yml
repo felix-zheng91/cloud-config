@@ -14,7 +14,7 @@ spring:
     database: mysql
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   rabbitmq:
-    host: http://localhost
+    host: localhost
   zipkin:
     sender:
       type: web

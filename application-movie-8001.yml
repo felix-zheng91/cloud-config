@@ -4,7 +4,7 @@ spring:
   application:
     name: microservice-movie
   rabbitmq:
-    host: http://localhost
+    host: localhost
   zipkin:
     sender:
       type: web
