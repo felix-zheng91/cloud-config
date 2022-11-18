@@ -25,3 +25,5 @@ eureka:
     prefer-ip-address: true
 #    lease-renewal-interval-in-seconds:  # 服务续约时间
     lease-expiration-duration-in-seconds: 30 # 服务失去连接下架时间
+test:
+  num: 10
